@@ -17,7 +17,8 @@ public class metadataParse : MonoBehaviour {
 	bool estateCard;
 	
 	// Use this for initialization
-	public void parseData (string metaData) {
+	public void parseData (string metaData) 
+	{
 		//find cloned objects
 		estateTitle = cloudHandler.newImageTarget.transform.Find("Canvas/estateCard/title").GetComponent<Text>();
 		estateBody = cloudHandler.newImageTarget.transform.Find("Canvas/estateCard/body").GetComponent<Text>();
