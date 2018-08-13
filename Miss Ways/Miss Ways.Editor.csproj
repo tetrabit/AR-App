@@ -359,17 +359,35 @@
       <Project>{A562FEC4-E2AC-740C-BAA7-7F578221E8E9}</Project>
       <Name>Miss Ways</Name>
     </ProjectReference>
+    <ProjectReference Include="Miss Ways.Plugins.csproj">
+      <Project>{3FB15A8C-3E1A-DCF8-9E36-4951C82A989F}</Project>
+      <Name>Miss Ways.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="Miss Ways.Editor.Plugins.csproj">
+      <Project>{83D0E4A3-9F49-0554-205D-1FE3321D4AA4}</Project>
+      <Name>Miss Ways.Editor.Plugins</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Packages\com.unity.standardevents\Editor\Importer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\EasyMobile\Demo\Fonts\SIL Open Font License.txt" />
+    <None Include="Assets\EasyMobile\Editor\EasyMobileDependencies.xml" />
+    <None Include="Assets\EasyMobile\Editor\EasyMobileSettings.txt" />
+    <None Include="Assets\EasyMobile\GUISkins\Fonts\License\LICENSE-2.0.txt" />
+    <None Include="Assets\EasyMobile\GUISkins\Fonts\License\OFL.txt" />
+    <None Include="Assets\EasyMobile\GUISkins\Fonts\License\ubuntu-font-licence-1.0.txt" />
+    <None Include="Assets\EasyMobile\Plugins\Android\m2repository\com\sglib\easymobile\easy-mobile-lite\maven-metadata.xml" />
+    <None Include="Assets\EasyMobile\link.xml" />
     <None Include="Assets\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />
     <None Include="Assets\Editor\Vuforia\Emulator\VuforiaEmulator.xml" />
     <None Include="Assets\Editor\Vuforia\ForPrint\ModelTarget\readme_3dprint.txt" />
     <None Include="Assets\Editor\Vuforia\TargetsetData\VuforiaMars_Object_info.xml" />
     <None Include="Assets\Editor\Vuforia\VuforiaMars_ModelTarget\authoringinfo.xml" />
     <None Include="Assets\Editor\Vuforia\VuforiaMars_VuMark\authoringinfo.xml" />
+    <None Include="Assets\Plugins\NativeGallery\README.txt" />
+    <None Include="Assets\Plugins\NativeShare\README.txt" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml" />
