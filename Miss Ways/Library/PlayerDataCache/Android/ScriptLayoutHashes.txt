@@ -2,6 +2,7 @@ Android
 PlayerPath?
 C:/Users/Anthony/Documents/missways/Miss Ways/missways.apk
 SceneListBegin?
+Assets/EasyMobile/Demo/Scenes/Modules/SharingDemo.unity
 Assets/Scenes/SplashScreen.unity
 Assets/Scenes/Tutorial.unity
 Assets/Scenes/Cloud.unity

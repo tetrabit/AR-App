@@ -24,7 +24,7 @@ namespace EasyMobile.Demo
         GameObject ImageHolder;
 
         // Screenshot names don't need to include the extension (e.g. ".png")
-        string ScreenshotName = "IndybooksScreenshot";
+        string ScreenshotName = "MissWays";
 
         Texture2D screenCap;
 
@@ -107,11 +107,11 @@ namespace EasyMobile.Demo
         {
             yield return new WaitForEndOfFrame();
 
-            ScreenshotName = "IndybooksScreenshot" + PlayerPrefs.GetInt("screenshot").ToString();
+            ScreenshotName = "MissWays" + PlayerPrefs.GetInt("screenshot").ToString();
             Debug.Log(ScreenshotName);
             Sharing.SaveScreenshot(ScreenshotName);
 
-            NativeUI.Alert("IndyBooks", "Picture Saved To Gallery");
+            NativeUI.Alert("MissWays", "Picture Saved To Gallery");
 
             for (int i = 0; i < UIToHide.Count; i++)
             {
@@ -122,7 +122,7 @@ namespace EasyMobile.Demo
         IEnumerator CROneStepSharing()
         {
             yield return new WaitForEndOfFrame();
-            ScreenshotName = "IndybooksScreenshot" + PlayerPrefs.GetInt("screenshot").ToString();
+            ScreenshotName = "MissWaysScreenshot" + PlayerPrefs.GetInt("screenshot").ToString();
             Debug.Log(ScreenshotName);
             Sharing.SaveScreenshot(ScreenshotName);
             NativeGallery.LoadImageAtPath(Sharing.ShareScreenshot(ScreenshotName, ""), -1);
