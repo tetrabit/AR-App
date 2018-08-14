@@ -13,7 +13,7 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 	#region PRIVATE_MEMBER_VARIABLES
 
 	// CloudRecoBehaviour reference to avoid lookups
-	private CloudRecoBehaviour mCloudRecoBehaviour;
+	private CloudRecoBehaviour cloudRecoBehaviour;
 	// ImageTracker reference to avoid lookups
 	private ObjectTracker mImageTracker;
 
@@ -39,15 +39,13 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 	/// </summary>
 	void Start()
 	{
-		// register this event handler at the cloud reco behaviour
-		CloudRecoBehaviour cloudRecoBehaviour = GetComponent<CloudRecoBehaviour>();
+        // register this event handler at the cloud reco behaviour
+        cloudRecoBehaviour = GetComponent<CloudRecoBehaviour>();
 		if (cloudRecoBehaviour)
 		{
 			cloudRecoBehaviour.RegisterEventHandler(this);
 		}
 
-		// remember cloudRecoBehaviour for later
-		mCloudRecoBehaviour = cloudRecoBehaviour;
 
 	}
 
@@ -63,26 +61,29 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 	{
 		// get a reference to the Image Tracker, remember it
 		mImageTracker = (ObjectTracker)TrackerManager.Instance.GetTracker<ObjectTracker>();
-	}
+
+
+    }
 
 	/// <summary>
 	/// visualize initialization errors
 	/// </summary>
 	public void OnInitError(TargetFinder.InitState initError)
 	{
-	}
+    }
 
 	/// <summary>
 	/// visualize update errors
 	/// </summary>
 	public void OnUpdateError(TargetFinder.UpdateState updateError)
 	{
-	}
 
-	/// <summary>
-	/// when we start scanning, unregister Trackable from the ImageTargetTemplate, then delete all trackables
-	/// </summary>
-	public void OnStateChanged(bool scanning) {
+    }
+
+    /// <summary>
+    /// when we start scanning, unregister Trackable from the ImageTargetTemplate, then delete all trackables
+    /// </summary>
+    public void OnStateChanged(bool scanning) {
 		mIsScanning = scanning;
 		if (scanning) {
 			// clear all known trackables
@@ -104,7 +105,7 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 		GameObject augmentation = null;
 
 		string metaData = targetSearchResult.MetaData;
-		mParse.parseData(metaData);
+        mParse.parseData(metaData);
 
 		if( augmentation != null )
 			augmentation.transform.parent = newImageTarget.transform;
@@ -115,8 +116,8 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 
 		if (!mIsScanning)
 		{
-			// stop the target finder
-			mCloudRecoBehaviour.CloudRecoEnabled = true;
+            // stop the target finder
+            cloudRecoBehaviour.CloudRecoEnabled = true;
 		}
 	}
 
