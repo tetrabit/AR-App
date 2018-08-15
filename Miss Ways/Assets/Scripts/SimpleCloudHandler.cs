@@ -13,7 +13,7 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 	#region PRIVATE_MEMBER_VARIABLES
 
 	// CloudRecoBehaviour reference to avoid lookups
-	private CloudRecoBehaviour mCloudRecoBehaviour;
+	private CloudRecoBehaviour cloudRecoBehaviour;
 	// ImageTracker reference to avoid lookups
 	private ObjectTracker mImageTracker;
 
@@ -40,14 +40,12 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 	void Start()
 	{
 		// register this event handler at the cloud reco behaviour
-		CloudRecoBehaviour cloudRecoBehaviour = GetComponent<CloudRecoBehaviour>();
+		cloudRecoBehaviour = GetComponent<CloudRecoBehaviour>();
 		if (cloudRecoBehaviour)
 		{
 			cloudRecoBehaviour.RegisterEventHandler(this);
 		}
 
-		// remember cloudRecoBehaviour for later
-		mCloudRecoBehaviour = cloudRecoBehaviour;
 
 	}
 
@@ -115,8 +113,8 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 
 		if (!mIsScanning)
 		{
-			// stop the target finder
-			mCloudRecoBehaviour.CloudRecoEnabled = true;
+            // stop the target finder
+             cloudRecoBehaviour.CloudRecoEnabled = true;
 		}
 	}
 
