@@ -22,6 +22,7 @@ extern UIViewController* UnityGetGLViewController();
 + (void)pickMediaSetMaxSize:(int)maxSize;
 + (int)isMediaPickerBusy;
 + (char *)getImageProperties:(NSString *)path;
++ (char *)getVideoProperties:(NSString *)path;
 + (char *)loadImageAtPath:(NSString *)path tempFilePath:(NSString *)tempFilePath maximumSize:(int)maximumSize;
 @end
 
@@ -301,8 +302,8 @@ static int imagePickerState = 0; // 0 -> none, 1 -> showing (always in this stat
 // Credit: https://stackoverflow.com/a/10531752/2373034
 + (void)pickMedia:(BOOL)imageMode savePath:(NSString *)imageSavePath {
 	imagePicker = [[UIImagePickerController alloc] init];
-    imagePicker.delegate = self;
-    imagePicker.allowsEditing = NO;
+	imagePicker.delegate = self;
+	imagePicker.allowsEditing = NO;
 	imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 	
 	if (imageMode)
@@ -349,10 +350,10 @@ static int imagePickerState = 0; // 0 -> none, 1 -> showing (always in this stat
 	int height = 0;
 	int orientation = -1;
 
-	CGImageSourceRef imageSource = CGImageSourceCreateWithURL((CFURLRef)[NSURL fileURLWithPath:path], nil);
+	CGImageSourceRef imageSource = CGImageSourceCreateWithURL((__bridge CFURLRef)[NSURL fileURLWithPath:path], nil);
 	if (imageSource != nil) {
-		NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:(NSString *)kCGImageSourceShouldCache];
-		CFDictionaryRef imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, (CFDictionaryRef)options);
+		NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:(__bridge NSString *)kCGImageSourceShouldCache];
+		CFDictionaryRef imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, (__bridge CFDictionaryRef)options);
 		CFRelease(imageSource);
 
 		CGFloat widthF = 0.0f, heightF = 0.0f;
@@ -413,6 +414,27 @@ static int imagePickerState = 0; // 0 -> none, 1 -> showing (always in this stat
 	return [self getCString:[NSString stringWithFormat:@"%d>%d> >%d", [metadata[0] intValue], [metadata[1] intValue], orientationUnity]];
 }
 
++ (char *)getVideoProperties:(NSString *)path {
+	CGSize size = CGSizeZero;
+	float rotation = 0;
+	long long duration = 0;
+	
+	AVURLAsset *asset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:path] options:nil];
+	if (asset != nil) {
+		duration = (long long) round(CMTimeGetSeconds([asset duration]) * 1000);
+		CGAffineTransform transform = [asset preferredTransform];
+		NSArray<AVAssetTrack *>* videoTracks = [asset tracksWithMediaType:AVMediaTypeVideo];
+		if (videoTracks != nil && [videoTracks count] > 0) {
+			size = [[videoTracks objectAtIndex:0] naturalSize];
+			transform = [[videoTracks objectAtIndex:0] preferredTransform];
+		}
+		
+		rotation = atan2(transform.b, transform.a) * (180.0 / M_PI);
+	}
+	
+	return [self getCString:[NSString stringWithFormat:@"%d>%d>%lld>%f", (int)roundf(size.width), (int)roundf(size.height), duration, rotation]];
+}
+
 + (UIImage *)scaleImage:(UIImage *)image maxSize:(int)maxSize {
 	CGFloat width = image.size.width;
 	CGFloat height = image.size.height;
@@ -433,7 +455,7 @@ static int imagePickerState = 0; // 0 -> none, 1 -> showing (always in this stat
 	
 	// Credit: https://github.com/mbcharbonneau/UIImage-Categories/blob/master/UIImage%2BAlpha.m
 	CGImageAlphaInfo alpha = CGImageGetAlphaInfo(image.CGImage);
-    BOOL hasAlpha = alpha == kCGImageAlphaFirst || alpha == kCGImageAlphaLast || alpha == kCGImageAlphaPremultipliedFirst || alpha == kCGImageAlphaPremultipliedLast;
+	BOOL hasAlpha = alpha == kCGImageAlphaFirst || alpha == kCGImageAlphaLast || alpha == kCGImageAlphaPremultipliedFirst || alpha == kCGImageAlphaPremultipliedLast;
 	
 	CGFloat scaleRatio = scaleX < scaleY ? scaleX : scaleY;
 	CGRect imageRect = CGRectMake(0, 0, width * scaleRatio, height * scaleRatio);
@@ -489,7 +511,7 @@ static int imagePickerState = 0; // 0 -> none, 1 -> showing (always in this stat
 	imagePickerState = 2;
 	UnitySendMessage("NGMediaReceiveCallbackiOS", "OnMediaReceived", [self getCString:path]);
 
-	[picker dismissViewControllerAnimated:YES completion:nil];
+	[picker dismissViewControllerAnimated:NO completion:nil];
 }
 
 + (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -504,7 +526,7 @@ static int imagePickerState = 0; // 0 -> none, 1 -> showing (always in this stat
 + (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
 	popup = nil;
 	imagePicker = nil;
-    UnitySendMessage("NGMediaReceiveCallbackiOS", "OnMediaReceived", "");
+	UnitySendMessage("NGMediaReceiveCallbackiOS", "OnMediaReceived", "");
 }
 
 // Credit: https://stackoverflow.com/a/37052118/2373034
@@ -560,6 +582,10 @@ extern "C" int _NativeGallery_IsMediaPickerBusy() {
 
 extern "C" char* _NativeGallery_GetImageProperties(const char* path) {
 	return [UNativeGallery getImageProperties:[NSString stringWithUTF8String:path]];
+}
+
+extern "C" char* _NativeGallery_GetVideoProperties(const char* path) {
+	return [UNativeGallery getVideoProperties:[NSString stringWithUTF8String:path]];
 }
 
 extern "C" char* _NativeGallery_LoadImageAtPath(const char* path, const char* temporaryFilePath, int maxSize) {

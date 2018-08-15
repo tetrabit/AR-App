@@ -175,9 +175,9 @@ namespace EasyMobile
             folder = Application.dataPath;
             #endif
 
-            // Take the required portion of the screen    
+            // Take the required portion of the screen
             Texture2D tt = CaptureScreenshot(startX, startY, width, height);
-            NativeGallery.SaveImageToGallery(tt, "MissWays", filename, null);
+
             // Encode texture into PNG
             byte[] bytes = tt.EncodeToPNG();
 

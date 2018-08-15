@@ -84,3 +84,4 @@ bool NativeGallery.CanOpenSettings();
 Texture2D NativeGallery.LoadImageAtPath( string imagePath, int maxSize = -1, bool markTextureNonReadable = true, bool generateMipmaps = true, bool linearColorSpace = false ): creates a Texture2D from the specified image file in correct orientation and returns it. Returns null, if something goes wrong
 
 NativeGallery.ImageProperties NativeGallery.GetImageProperties( string imagePath ): returns an ImageProperties instance that holds the width, height and mime type information of an image file without creating a Texture2D object. Mime type will be null, if it can't be determined
+NativeGallery.VideoProperties NativeGallery.GetVideoProperties( string videoPath ): returns a VideoProperties instance that holds the width, height, duration (in milliseconds) and rotation information of a video file
