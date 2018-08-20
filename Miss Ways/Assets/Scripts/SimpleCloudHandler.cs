@@ -19,17 +19,18 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
     public Text texter;
 	private bool mIsScanning = false;
     public RawImage video;
+    public RawImage newVideo;
 
-	#endregion // PRIVATE_MEMBER_VARIABLES
+    #endregion // PRIVATE_MEMBER_VARIABLES
 
 
 
-	#region EXPOSED_PUBLIC_VARIABLES
+    #region EXPOSED_PUBLIC_VARIABLES
 
-	/// <summary>
-	/// can be set in the Unity inspector to reference a ImageTargetBehaviour that is used for augmentations of new cloud reco results.
-	/// </summary>
-	public ImageTargetBehaviour ImageTargetTemplate;
+    /// <summary>
+    /// can be set in the Unity inspector to reference a ImageTargetBehaviour that is used for augmentations of new cloud reco results.
+    /// </summary>
+    public ImageTargetBehaviour ImageTargetTemplate;
 	
 	#endregion
 
@@ -114,7 +115,7 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 		string metaData = targetSearchResult.MetaData;
         texter.text = "Cloud Reco data:" + metaData;
         StartCoroutine(video.GetComponent<VideoPlayers>().newVideo(metaData));
-        
+        StartCoroutine(newVideo.GetComponent<PlayVideo>().newVideo(metaData));
 
 
 
