@@ -114,8 +114,8 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 
 		string metaData = targetSearchResult.MetaData;
         texter.text = "Cloud Reco data:" + metaData;
-        StartCoroutine(video.GetComponent<VideoPlayers>().newVideo(metaData));
-        StartCoroutine(newVideo.GetComponent<PlayVideo>().newVideo(metaData));
+        //StartCoroutine(video.GetComponent<VideoPlayers>().newVideo(metaData));
+        StartCoroutine(newImageTarget.GetComponent<PlayVideo>().newVideo(metaData));
 
 
 

@@ -63,6 +63,17 @@ public class PlayVideo : MonoBehaviour {
 
     public IEnumerator newVideo(string urls) {
 
+        while(videoPlayer == null)
+        {
+            yield return null;
+        }
+
+        while (audioSource == null)
+        {
+            yield return null;
+        }
+
+
         videoPlayer.url = urls;
         videoPlayer.Prepare();
 
@@ -74,7 +85,7 @@ public class PlayVideo : MonoBehaviour {
         }
 
         imager.texture = videoPlayer.texture;
-
+        Debug.Log(videoPlayer.texture);
         Debug.Log("Done Preparing " + urls);
         videoPlayer.Play();
         audioSource.Play();
