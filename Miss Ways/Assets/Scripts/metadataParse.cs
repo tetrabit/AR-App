@@ -51,22 +51,19 @@ public class MetadataParse : MonoBehaviour {
             LoadVideo(splitMetadata[1], imageTarget);
             break;
           case "3durl":
-			Debug.Log("3dURL Parsed: " + splitMetadata[1]);
-            Load3dAsset(splitMetadata[1]);
+			Debug.Log("3dURL Parsed:" + splitMetadata[1]);
+            //Load3dAsset(splitMetadata[1]);
             break;
-          case "estateCard":
-            estateCard = true;
-            break;
-          case "estateCardTitle":
-            estateTitle.text = line.Replace(splitMetadata[0],"");
-            break;
-          case "estateCardDescription":
-            estateBody.text = line.Replace(splitMetadata[0],"");
-            break;
-          case "estateImageUrl":
-			LoadImage(splitMetadata[1]);
-            Debug.Log("load image from this url" + splitMetadata[1]);
-            break;
+          case "phone":
+                Debug.Log("Phone:" + splitMetadata[1]);
+                break;
+          case "website":
+                Debug.Log("Website:" + splitMetadata[1]);
+                break;
+          case "email":
+                Debug.Log("email:" + splitMetadata[1]);
+                break;
+          
           default:
             break;
 		}
