@@ -20,7 +20,10 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 	private bool mIsScanning = false;
     public RawImage video;
     public RawImage newVideo;
-
+    [Range(0, 2)]
+    public float imageWidth = 1f;
+    [Range(0, 2)]
+    public float imageHeight = 1f;
     #endregion // PRIVATE_MEMBER_VARIABLES
 
 
@@ -30,7 +33,7 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
     /// <summary>
     /// can be set in the Unity inspector to reference a ImageTargetBehaviour that is used for augmentations of new cloud reco results.
     /// </summary>
-    public ImageTargetBehaviour ImageTargetTemplate;
+    public ImageTargetBehaviour imageTargetTemplate;
 	
 	#endregion
 
@@ -96,11 +99,11 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
         if (scanning) {
 			// clear all known trackables
 			ObjectTracker tracker = TrackerManager.Instance.GetTracker<ObjectTracker> ();
-			tracker.TargetFinder.ClearTrackables (false);
+			tracker.TargetFinder.ClearTrackables (true);
 		}
 	}
 
-	public metadataParse mParse;
+	public MetadataParse mParse;
 	public GameObject newImageTarget;
 	/// <summary>
 	/// Handles new search results
@@ -109,17 +112,16 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 	public void OnNewSearchResult(TargetFinder.TargetSearchResult targetSearchResult)
 	{
 		// duplicate the referenced image target
-		newImageTarget = Instantiate(ImageTargetTemplate.gameObject) as GameObject;
+		newImageTarget = Instantiate(imageTargetTemplate.gameObject) as GameObject;
 		GameObject augmentation = null;
 
 		string metaData = targetSearchResult.MetaData;
+        Debug.Log("MetaData: \n" + metaData);
         texter.text = "Cloud Reco data:" + metaData;
         //StartCoroutine(video.GetComponent<VideoPlayers>().newVideo(metaData));
-        StartCoroutine(newImageTarget.GetComponent<PlayVideo>().newVideo(metaData));
-
-
-
-        //mParse.parseData(metaData);
+        //StartCoroutine(newImageTarget.GetComponent<PlayVideo>().newVideo(metaData));
+        
+        mParse.ParseData(metaData, newImageTarget);
 
 
 
@@ -129,8 +131,10 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
         // enable the new result with the same ImageTargetBehaviour:
         
         ImageTargetBehaviour imageTargetBehaviour = mImageTracker.TargetFinder.EnableTracking(targetSearchResult, newImageTarget);
+        imageTargetBehaviour.SetHeight(imageHeight);
+        imageTargetBehaviour.SetWidth(imageWidth);
 
-		if (!mIsScanning)
+        if (!mIsScanning)
 		{
             // stop the target finder
             cloudRecoBehaviour.CloudRecoEnabled = true;

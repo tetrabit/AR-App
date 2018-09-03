@@ -13,7 +13,7 @@ public class PlayVideo : MonoBehaviour {
 
     void Start () {
         Application.runInBackground = true;
-        StartCoroutine(setupVideoPlayer());
+        StartCoroutine(SetupVideoPlayer());
     }
 	
 	// Update is called once per frame
@@ -21,7 +21,7 @@ public class PlayVideo : MonoBehaviour {
 		
 	}
 
-    IEnumerator setupVideoPlayer()
+    IEnumerator SetupVideoPlayer()
     {
 
         //Add VideoPlayer to the GameObject
@@ -61,7 +61,7 @@ public class PlayVideo : MonoBehaviour {
         yield return null;
     }
 
-    public IEnumerator newVideo(string urls) {
+    public IEnumerator NewVideo(string urls) {
 
         while(videoPlayer == null)
         {
@@ -73,7 +73,7 @@ public class PlayVideo : MonoBehaviour {
             yield return null;
         }
 
-
+        Debug.Log(urls);
         videoPlayer.url = urls;
         videoPlayer.Prepare();
 

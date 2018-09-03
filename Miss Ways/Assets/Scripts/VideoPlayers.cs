@@ -13,13 +13,13 @@ public class VideoPlayers : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Application.runInBackground = true;
-        StartCoroutine(playVideo());
+        StartCoroutine(PlayVideo());
        // newVideo("https://s3.amazonaws.com/missways-application/Videos/VoW1.mp4");
 
 
     }
 
-    IEnumerator playVideo()
+    IEnumerator PlayVideo()
     {
 
         //Add VideoPlayer to the GameObject
@@ -74,7 +74,7 @@ public class VideoPlayers : MonoBehaviour {
 
     }
 
-    public IEnumerator newVideo(string urls) {
+    public IEnumerator NewVideo(string urls) {
 
         videoPlayer.url = urls;
         videoPlayer.Prepare();
