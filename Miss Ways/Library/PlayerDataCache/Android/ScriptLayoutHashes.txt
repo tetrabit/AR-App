@@ -247,7 +247,7 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-7a312da74b235b33edc7c5f771c0c098 Assembly-CSharp.dll:.PlayVideo
+6f257dfff6c9d00e6a5598758a079780 Assembly-CSharp.dll:.PlayVideo
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 dbafb49d9e71d0febeac5c4e0fffe123 Assembly-CSharp.dll:.CloudHandler
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
@@ -320,3 +320,4 @@ f351a53a5bb6578f76af7819b5eb8592 Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 ad24de185ef9a605870b931cda4f181e Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
+4a1a2ef325528ec0f71e4099082a3c9f Assembly-CSharp.dll:Launchable.LaunchableTrackableEventHandler

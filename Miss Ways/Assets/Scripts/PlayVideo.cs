@@ -9,17 +9,36 @@ public class PlayVideo : MonoBehaviour {
     public VideoPlayer videoPlayer;
     public AudioSource audioSource;
     public VideoSource videoSource;
-
+    public Launchable.LaunchableTrackableEventHandler lteh;
 
     void Start () {
+        lteh = GetComponent<Launchable.LaunchableTrackableEventHandler>();
         Application.runInBackground = true;
         StartCoroutine(SetupVideoPlayer());
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update() {
+
+    }
+
+    public void PlayVid()
+    {
+        if (videoPlayer && videoPlayer.isPrepared && videoPlayer.url != null)
+        {
+            videoPlayer.Play();
+        }
+    }
+
+    public void PauseVid()
+    {
+        if(videoPlayer && videoPlayer.isPrepared && videoPlayer.url != null)
+        {
+            videoPlayer.Pause();
+        }
+    }
+
+
 
     IEnumerator SetupVideoPlayer()
     {
@@ -55,7 +74,7 @@ public class PlayVideo : MonoBehaviour {
 
         //Assign the Texture from Video to RawImage to be displayed
         imager.texture = videoPlayer.texture;
-
+        lteh.SetVideoPlayer(gameObject.GetComponent<PlayVideo>());
         Debug.Log("Done setting up video player");
 
         yield return null;

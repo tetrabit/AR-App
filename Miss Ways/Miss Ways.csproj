@@ -310,6 +310,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CloudHandler.cs" />
+    <Compile Include="Assets\Scripts\LaunchableTrackableEventHandler.cs" />
     <Compile Include="Assets\Scripts\LoadWebsite.cs" />
     <Compile Include="Assets\Scripts\MetadataParse.cs" />
     <Compile Include="Assets\Scripts\PlayFullscreenVideo.cs" />

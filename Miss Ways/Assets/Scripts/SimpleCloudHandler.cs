@@ -20,10 +20,6 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 	private bool mIsScanning = false;
     public RawImage video;
     public RawImage newVideo;
-    [Range(0, 2)]
-    public float imageWidth = 1f;
-    [Range(0, 2)]
-    public float imageHeight = 1f;
     #endregion // PRIVATE_MEMBER_VARIABLES
 
 
@@ -112,7 +108,7 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 	public void OnNewSearchResult(TargetFinder.TargetSearchResult targetSearchResult)
 	{
 		// duplicate the referenced image target
-		newImageTarget = Instantiate(imageTargetTemplate.gameObject) as GameObject;
+		newImageTarget = Instantiate(imageTargetTemplate.gameObject, Vector3.zero, Quaternion.Euler(90, 0, 0)) as GameObject;
 		GameObject augmentation = null;
 
 		string metaData = targetSearchResult.MetaData;
@@ -120,7 +116,9 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
         texter.text = "Cloud Reco data:" + metaData;
         //StartCoroutine(video.GetComponent<VideoPlayers>().newVideo(metaData));
         //StartCoroutine(newImageTarget.GetComponent<PlayVideo>().newVideo(metaData));
-        
+
+        if (!mParse)
+            Debug.Log("shit was null");
         mParse.ParseData(metaData, newImageTarget);
 
 
@@ -131,8 +129,6 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
         // enable the new result with the same ImageTargetBehaviour:
         
         ImageTargetBehaviour imageTargetBehaviour = mImageTracker.TargetFinder.EnableTracking(targetSearchResult, newImageTarget);
-        imageTargetBehaviour.SetHeight(imageHeight);
-        imageTargetBehaviour.SetWidth(imageWidth);
 
         if (!mIsScanning)
 		{
@@ -143,5 +139,7 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 
 
 	#endregion // ICloudRecoEventHandler_IMPLEMENTATION
+
+
 
 }
