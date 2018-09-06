@@ -56,8 +56,10 @@
      <Compile Include="Assets\Scripts\LoadWebsite.cs" />
      <Compile Include="Assets\Scripts\metadataParse.cs" />
      <Compile Include="Assets\Scripts\PlayFullscreenVideo.cs" />
+     <Compile Include="Assets\Scripts\PlayVideo.cs" />
      <Compile Include="Assets\Scripts\SimpleCloudHandler.cs" />
      <Compile Include="Assets\Scripts\Tutorial.cs" />
+     <Compile Include="Assets\Scripts\VideoPlayers.cs" />
      <Compile Include="Assets\UI\Pagination\Events\DragEventAnalysis.cs" />
      <Compile Include="Assets\UI\Pagination\Events\PassThroughDragEvents.cs" />
      <Compile Include="Assets\UI\Pagination\Examples\PaginationExampleController.cs" />

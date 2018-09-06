@@ -169,7 +169,7 @@ PlayerSettings:
   StripUnusedMeshComponents: 1
   VertexChannelCompressionMask: 4054
   iPhoneSdkVersion: 988
-  iOSTargetOSVersionString: 8.0
+  iOSTargetOSVersionString: 10.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 9.0
@@ -260,7 +260,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
+      m_Icon: {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -268,118 +268,118 @@ PlayerSettings:
   - m_BuildTarget: Android
     m_Icons:
     - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      m_Width: 192
-      m_Height: 192
-      m_Kind: 0
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      m_Width: 144
-      m_Height: 144
-      m_Kind: 0
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      m_Width: 96
-      m_Height: 96
-      m_Kind: 0
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      m_Width: 72
-      m_Height: 72
-      m_Kind: 0
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      m_Width: 48
-      m_Height: 48
-      m_Kind: 0
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      m_Width: 36
-      m_Height: 36
-      m_Kind: 0
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      m_Width: 192
-      m_Height: 192
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      m_Width: 144
-      m_Height: 144
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      m_Width: 96
-      m_Height: 96
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      m_Width: 72
-      m_Height: 72
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      m_Width: 48
-      m_Height: 48
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      m_Width: 36
-      m_Height: 36
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
       m_Width: 324
       m_Height: 324
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
       m_Width: 216
       m_Height: 216
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
       m_Width: 162
       m_Height: 162
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
       m_Width: 108
       m_Height: 108
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
-      - {fileID: 2800000, guid: 7c27e50e81121f548bd3a19b072ef40c, type: 3}
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
       m_Width: 81
       m_Height: 81
       m_Kind: 2
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      m_Width: 192
+      m_Height: 192
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      m_Width: 144
+      m_Height: 144
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      m_Width: 96
+      m_Height: 96
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      m_Width: 72
+      m_Height: 72
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      m_Width: 48
+      m_Height: 48
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      m_Width: 36
+      m_Height: 36
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      m_Width: 192
+      m_Height: 192
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      m_Width: 144
+      m_Height: 144
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      m_Width: 96
+      m_Height: 96
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      m_Width: 72
+      m_Height: 72
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      m_Width: 48
+      m_Height: 48
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: f725f5a4a6e719749bdd9c70e20b25a4, type: 3}
+      m_Width: 36
+      m_Height: 36
+      m_Kind: 0
       m_SubKind: 
   - m_BuildTarget: iPhone
     m_Icons:
@@ -540,6 +540,8 @@ PlayerSettings:
     m_Enabled: 1
   - m_BuildTarget: Android
     m_Enabled: 1
+  - m_BuildTarget: iOS
+    m_Enabled: 1
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   m_TemplateCustomTags: {}
@@ -555,7 +557,7 @@ PlayerSettings:
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
-  cameraUsageDescription: 
+  cameraUsageDescription: Required for augmented reality support.
   locationUsageDescription: 
   microphoneUsageDescription: 
   switchNetLibKey: 
@@ -896,9 +898,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 1f07ae43-1a8e-4039-8ce1-888959856e4b
-  projectName: Miss Ways
-  organizationId: teamlaunchable
+  cloudProjectId: 712fc6fc-1bbb-4e0b-8193-cae367984187
+  projectName: Miss Ways (1)
+  organizationId: jeromehinds
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

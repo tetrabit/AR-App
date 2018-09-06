@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 using System.IO;
 using UnityEngine.UI;
 
-public class metadataParse : MonoBehaviour {
+public class MetadataParse : MonoBehaviour {
 	
 	private SimpleCloudHandler cloudHandler;
 	Text estateTitle;
@@ -17,72 +17,71 @@ public class metadataParse : MonoBehaviour {
 	bool estateCard;
 	
 	// Use this for initialization
-	public void parseData (string metaData) 
+	public void ParseData (string metaData, GameObject imageTarget) 
 	{
 		//find cloned objects
-		estateTitle = cloudHandler.newImageTarget.transform.Find("Canvas/estateCard/title").GetComponent<Text>();
-		estateBody = cloudHandler.newImageTarget.transform.Find("Canvas/estateCard/body").GetComponent<Text>();
-		estatePicture = cloudHandler.newImageTarget.transform.Find("Canvas/picture").GetComponent<Image>();
+		//estateTitle = cloudHandler.newImageTarget.transform.Find("Canvas/estateCard/title").GetComponent<Text>();
+		//estateBody = cloudHandler.newImageTarget.transform.Find("Canvas/estateCard/body").GetComponent<Text>();
+		//estatePicture = cloudHandler.newImageTarget.transform.Find("Canvas/picture").GetComponent<Image>();
 
 		using (StringReader reader = new StringReader(metaData))
 		{
 			string line;
 			while ((line = reader.ReadLine()) != null)
 			{
-				executeLineCommand(line);
+                ExecuteLineCommand(line, imageTarget);
 			}
 		}
 	}
 	
-	IEnumerator waitToPlay(){
+	IEnumerator WaitToPlay(){
 		yield return new WaitForSeconds(1f);
 		//Play video here
 	}
 	
-	void executeLineCommand(string line){
+	void ExecuteLineCommand(string line, GameObject imageTarget){
 		string[] splitMetadata = line.Split(' ');
-		print(line);
+		Debug.Log(line);
 		if(splitMetadata[1].StartsWith("none")) return;
 		
 		switch (splitMetadata[0])
 		{
-          case "videoUrl:":
-            loadVideo(splitMetadata[1]);
+          case "videoUrl":
+            Debug.Log("Video URL Parsed: " + splitMetadata[1]);
+            LoadVideo(splitMetadata[1], imageTarget);
             break;
-          case "3durl:":
-			print("3dURL loading");
-            load3dAsset(splitMetadata[1]);
+          case "3durl":
+			Debug.Log("3dURL Parsed:" + splitMetadata[1]);
+            //Load3dAsset(splitMetadata[1]);
             break;
-          case "estateCard:":
-            estateCard = true;
-            break;
-          case "estateCardTitle:":
-            estateTitle.text = line.Replace(splitMetadata[0],"");
-            break;
-          case "estateCardDescription:":
-            estateBody.text = line.Replace(splitMetadata[0],"");
-            break;
-          case "estateImageUrl:":
-			loadImage(splitMetadata[1]);
-            print("load image from this url" + splitMetadata[1]);
-            break;
+          case "phone":
+                Debug.Log("Phone:" + splitMetadata[1]);
+                break;
+          case "website":
+                Debug.Log("Website:" + splitMetadata[1]);
+                break;
+          case "email":
+                Debug.Log("email:" + splitMetadata[1]);
+                break;
+          
           default:
             break;
 		}
 	}
 	
-	void loadVideo(string url){
+	void LoadVideo(string url, GameObject imageTarget){
+        StartCoroutine(imageTarget.GetComponent<PlayVideo>().NewVideo(url));
         //Load Video here
 			//MPMPPlayback = cloudHandler.newImageTarget.transform.Find("MPMP.instance").GetComponent<MPMP>();
 			//MPMPPlayback.Load(url);
-			StartCoroutine(waitToPlay());
+		//StartCoroutine(WaitToPlay());
 	}
 	
-	void load3dAsset(string url){
+	void Load3dAsset(string url){
 		StartCoroutine(GetAssetBundle(url));
 	}
 	
-	void loadImage(string url){
+	void LoadImage(string url){
 		StartCoroutine(GetImage(url));
 	}
 	
