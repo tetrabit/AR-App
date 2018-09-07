@@ -312,7 +312,7 @@
     <Compile Include="Assets\Scripts\CloudHandler.cs" />
     <Compile Include="Assets\Scripts\LaunchableTrackableEventHandler.cs" />
     <Compile Include="Assets\Scripts\LoadWebsite.cs" />
-    <Compile Include="Assets\Scripts\metadataParse.cs" />
+    <Compile Include="Assets\Scripts\MetadataParse.cs" />
     <Compile Include="Assets\Scripts\PlayFullscreenVideo.cs" />
     <Compile Include="Assets\Scripts\PlayVideo.cs" />
     <Compile Include="Assets\Scripts\SimpleCloudHandler.cs" />

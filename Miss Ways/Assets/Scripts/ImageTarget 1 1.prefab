@@ -151,6 +151,7 @@ MonoBehaviour:
   videoPlayer: {fileID: 0}
   audioSource: {fileID: 0}
   videoSource: 1
+  lteh: {fileID: 0}
 --- !u!114 &114559303233972102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,6 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15623012f50ef6445862fc938fd5ddde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 0}
 --- !u!222 &222473945720829360
 CanvasRenderer:
   m_ObjectHideFlags: 1

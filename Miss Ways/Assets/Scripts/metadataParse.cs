@@ -47,21 +47,24 @@ public class MetadataParse : MonoBehaviour {
 		switch (splitMetadata[0])
 		{
           case "videoUrl":
-            Debug.Log("Video URL Parsed: " + splitMetadata[1]);
+            Debug.Log("Video URL Parsed" + splitMetadata[1]);
             LoadVideo(splitMetadata[1], imageTarget);
             break;
           case "3durl":
-			Debug.Log("3dURL Parsed:" + splitMetadata[1]);
+			Debug.Log("3dURL Parsed" + splitMetadata[1]);
             //Load3dAsset(splitMetadata[1]);
             break;
           case "phone":
-                Debug.Log("Phone:" + splitMetadata[1]);
+                Debug.Log("Phone" + splitMetadata[1]);
+                DisplayPhoneLink(splitMetadata[1]);
                 break;
           case "website":
-                Debug.Log("Website:" + splitMetadata[1]);
+                Debug.Log("Website" + splitMetadata[1]);
+                DisplayWebsiteLink(splitMetadata[1]);
                 break;
           case "email":
-                Debug.Log("email:" + splitMetadata[1]);
+                Debug.Log("email" + splitMetadata[1]);
+                DisplayEmailLink(splitMetadata[1]);
                 break;
           
           default:
@@ -80,6 +83,21 @@ public class MetadataParse : MonoBehaviour {
 	void Load3dAsset(string url){
 		StartCoroutine(GetAssetBundle(url));
 	}
+
+    void DisplayPhoneLink(string link)
+    {
+
+    }
+
+    void DisplayWebsiteLink(string link)
+    {
+
+    }
+
+    void DisplayEmailLink(string link)
+    {
+
+    }
 	
 	void LoadImage(string url){
 		StartCoroutine(GetImage(url));
