@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/EasyMobile/Demo/Scenes/Modules/SharingDemo.unity
+- path: Assets/Scenes/Cloud.unity
   isLoaded: 1
   isActive: 1
