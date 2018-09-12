@@ -61,12 +61,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\ColorChooser.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\ColorHandler.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\DemoHomeController.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\DemoUtils.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\DigitalClock.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\NativeUIDemo.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\SharingDemo.cs" />
+    <Compile Include="Assets\EasyMobile\Demo\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\EasyMobile\Scripts\Common\AndroidUtil.cs" />
+    <Compile Include="Assets\EasyMobile\Scripts\Common\SgLib\FileUtil.cs" />
+    <Compile Include="Assets\EasyMobile\Scripts\NativeAPIs\NativeUI\NativeUI.cs" />
+    <Compile Include="Assets\EasyMobile\Scripts\NativeAPIs\NativeUI\NativeUI_AlertPopup.cs" />
+    <Compile Include="Assets\EasyMobile\Scripts\NativeAPIs\NativeUI\Platforms\AndroidNativeAlert.cs" />
+    <Compile Include="Assets\EasyMobile\Scripts\NativeAPIs\NativeUI\Platforms\iOSNativeAlert.cs" />
+    <Compile Include="Assets\EasyMobile\Scripts\Sharing\Platforms\AndroidNativeShare.cs" />
+    <Compile Include="Assets\EasyMobile\Scripts\Sharing\Platforms\iOSNativeShare.cs" />
+    <Compile Include="Assets\EasyMobile\Scripts\Sharing\Sharing.cs" />
+    <Compile Include="Assets\Scripts\AutoFocus.cs" />
     <Compile Include="Assets\Scripts\CloudHandler.cs" />
+    <Compile Include="Assets\Scripts\Flash.cs" />
     <Compile Include="Assets\Scripts\LaunchableTrackableEventHandler.cs" />
     <Compile Include="Assets\Scripts\LoadWebsite.cs" />
     <Compile Include="Assets\Scripts\MetadataParse.cs" />
     <Compile Include="Assets\Scripts\PlayFullscreenVideo.cs" />
     <Compile Include="Assets\Scripts\PlayVideo.cs" />
+    <Compile Include="Assets\Scripts\Screenshot.cs" />
     <Compile Include="Assets\Scripts\SimpleCloudHandler.cs" />
     <Compile Include="Assets\Scripts\Tutorial.cs" />
     <Compile Include="Assets\Scripts\VideoPlayers.cs" />
@@ -118,18 +138,24 @@
     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml" />
     <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
+    <None Include="Assets\EasyMobile\Plugins\Android\m2repository\com\sglib\easymobile\easy-mobile-lite\maven-metadata.xml" />
     <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
+    <None Include="Assets\EasyMobile\link.xml" />
     <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
+    <None Include="Assets\EasyMobile\GUISkins\Fonts\License\LICENSE-2.0.txt" />
     <None Include="Assets\UI\Pagination\Documentation\Change List.txt" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml" />
     <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
+    <None Include="Assets\EasyMobile\GUISkins\Fonts\License\ubuntu-font-licence-1.0.txt" />
+    <None Include="Assets\EasyMobile\GUISkins\Fonts\License\OFL.txt" />
     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_VuMark.xml" />
     <None Include="Assets\Vuforia\Shaders\DepthContour.shader" />
     <None Include="Assets\UI\Pagination\Documentation\Upgrading from v1.19 to v1.20.txt" />
     <None Include="Assets\UI\Pagination\Examples\Sprites\Fantasy UI\Portraits\Flare Portrait Pack (Number Four).txt" />
     <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
+    <None Include="Assets\EasyMobile\Demo\Fonts\SIL Open Font License.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Anthony/Documents/missways/Miss Ways/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -370,6 +396,12 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{BE5BBB62-41DC-D8BE-58B1-F649D4842C39}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
