@@ -79,6 +79,7 @@
     <Compile Include="Assets\EasyMobile\Scripts\Sharing\Platforms\iOSNativeShare.cs" />
     <Compile Include="Assets\EasyMobile\Scripts\Sharing\Sharing.cs" />
     <Compile Include="Assets\Scripts\AutoFocus.cs" />
+    <Compile Include="Assets\Scripts\CallToActionManager.cs" />
     <Compile Include="Assets\Scripts\CloudHandler.cs" />
     <Compile Include="Assets\Scripts\Flash.cs" />
     <Compile Include="Assets\Scripts\LaunchableTrackableEventHandler.cs" />

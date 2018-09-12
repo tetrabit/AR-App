@@ -14,7 +14,7 @@ public class PlayFullscreenVideo : MonoBehaviour {
         }
         else
         {
-            SceneManager.LoadScene("Cloud", LoadSceneMode.Single);
+            SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
         }
     }
 }

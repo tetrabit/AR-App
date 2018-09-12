@@ -19,6 +19,6 @@ public class Tutorial : MonoBehaviour
     public void TutorialHasBeenRan()
     {
         PlayerPrefs.SetInt(tutorial, 1);
-        SceneManager.LoadScene("Cloud", LoadSceneMode.Single);
+        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
     }
 }

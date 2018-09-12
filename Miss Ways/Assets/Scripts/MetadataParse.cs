@@ -25,6 +25,8 @@ public class MetadataParse : MonoBehaviour
         //estateBody = cloudHandler.newImageTarget.transform.Find("Canvas/estateCard/body").GetComponent<Text>();
         //estatePicture = cloudHandler.newImageTarget.transform.Find("Canvas/picture").GetComponent<Image>();
 
+        Launchable.CallToActionManager.instance.ResetLinks();
+
         using (StringReader reader = new StringReader(metaData))
         {
             string line;
@@ -91,17 +93,20 @@ public class MetadataParse : MonoBehaviour
 
     void DisplayPhoneLink(string link)
     {
-
+        Launchable.CallToActionManager.instance.SetPhoneLink(link);
+        Launchable.CallToActionManager.instance.SetShowPhoneLink(true);
     }
 
     void DisplayWebsiteLink(string link)
     {
-
+        Launchable.CallToActionManager.instance.SetWebsiteLink(link);
+        Launchable.CallToActionManager.instance.SetShowWebsiteLink(true);
     }
 
     void DisplayEmailLink(string link)
     {
-
+        Launchable.CallToActionManager.instance.SetEmailLink(link);
+        Launchable.CallToActionManager.instance.SetShowEmailLink(true);
     }
 
     void LoadImage(string url)

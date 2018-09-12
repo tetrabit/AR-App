@@ -90,6 +90,11 @@ namespace Launchable
             {
                 videoPlayer.PlayVid();
             }
+
+            if (Launchable.CallToActionManager.instance != null)
+            {
+                Launchable.CallToActionManager.instance.ShowLinks();
+            }
         }
 
 
@@ -114,6 +119,11 @@ namespace Launchable
             if(videoPlayer != null)
             {
                 videoPlayer.PauseVid();
+            }
+            
+            if(Launchable.CallToActionManager.instance != null)
+            {
+                Launchable.CallToActionManager.instance.HideLinks();
             }
         }
 

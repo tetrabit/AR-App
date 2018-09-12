@@ -14,9 +14,8 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 
 	// CloudRecoBehaviour reference to avoid lookups
 	private CloudRecoBehaviour cloudRecoBehaviour;
-	// ImageTracker reference to avoid lookups
-	private ObjectTracker mImageTracker;
-    public Text texter;
+    // ImageTracker reference to avoid lookups
+    private ObjectTracker mImageTracker;
 	private bool mIsScanning = false;
     public RawImage video;
     public RawImage newVideo;
@@ -40,13 +39,11 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 	/// </summary>
 	void Start()
 	{
-        texter.text = "Cloud Reco initialized";
         // register this event handler at the cloud reco behaviour
         cloudRecoBehaviour = GetComponent<CloudRecoBehaviour>();
 		if (cloudRecoBehaviour)
 		{
 			cloudRecoBehaviour.RegisterEventHandler(this);
-            texter.text = "Cloud Reco initialized";
         }
 
 
@@ -62,11 +59,8 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 	/// </summary>
 	public void OnInitialized()
 	{
-        texter.text = "Cloud Reco initialized";
         // get a reference to the Image Tracker, remember it
         mImageTracker = (ObjectTracker)TrackerManager.Instance.GetTracker<ObjectTracker>();
-
-
     }
 
 	/// <summary>
@@ -74,7 +68,7 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 	/// </summary>
 	public void OnInitError(TargetFinder.InitState initError)
 	{
-        texter.text = "Cloud Reco init error " + initError.ToString();
+
     }
 
 	/// <summary>
@@ -82,7 +76,6 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 	/// </summary>
 	public void OnUpdateError(TargetFinder.UpdateState updateError)
 	{
-        texter.text = "Cloud Reco update error " + updateError.ToString();
 
     }
 
@@ -113,7 +106,6 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler
 
 		string metaData = targetSearchResult.MetaData;
         Debug.Log("MetaData: \n" + metaData);
-        texter.text = "Cloud Reco data:" + metaData;
         //StartCoroutine(video.GetComponent<VideoPlayers>().newVideo(metaData));
         //StartCoroutine(newImageTarget.GetComponent<PlayVideo>().newVideo(metaData));
 
