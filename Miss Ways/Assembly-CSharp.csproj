@@ -73,6 +73,8 @@
     <Compile Include="Assets\Launchable\Scripts\PlayVideo.cs" />
     <Compile Include="Assets\Launchable\Scripts\Screenshot.cs" />
     <Compile Include="Assets\Launchable\Scripts\Tutorial.cs" />
+    <Compile Include="Assets\MissWays\Scripts\OpenURL.cs" />
+    <Compile Include="Assets\MissWays\Scripts\ShowMenu.cs" />
     <Compile Include="Assets\UI\Pagination\Events\DragEventAnalysis.cs" />
     <Compile Include="Assets\UI\Pagination\Events\PassThroughDragEvents.cs" />
     <Compile Include="Assets\UI\Pagination\Examples\PaginationExampleController.cs" />

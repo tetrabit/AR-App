@@ -131,10 +131,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 917, y: 592}
-  m_MaxSize: {x: 22012, y: 18042}
+  m_MinSize: {x: 917, y: 613}
+  m_MaxSize: {x: 22012, y: 18063}
   vertical: 1
-  controlID: 54
+  controlID: 130
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 492}
   m_MaxSize: {x: 22012, y: 14042}
   vertical: 0
-  controlID: 55
+  controlID: 131
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 56
+  controlID: 68
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -304,8 +304,8 @@ MonoBehaviour:
     y: 587
     width: 1920
     height: 360
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 100, y: 121}
+  m_MaxSize: {x: 4000, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -384,7 +384,7 @@ MonoBehaviour:
       width: 1509.6538
       height: 2960
     m_MinimalGUI: 1
-  m_defaultScale: 0.2734375
+  m_defaultScale: 0.18547298
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 280, y: 566}
@@ -523,9 +523,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 962c0000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 6e90fdff3491fdffae93fdffde93fdff0094fdffa6f4feff62f5feffc8f7feffe4f7fefff2f7feff8cdbffff36dcffff9cdeffffb8deffffc8deffffe6fbffff000000001a4600009c460000704c0000f24c00003e500000
+    m_ExpandedIDs: 9cf2ffff96f3ffffecf5ffff08f6ffff18f6ffffe6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -586,34 +586,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Launchable/Scenes
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/EasyMobile
+  - Assets/Launchable/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Anthony\Documents\missways\Miss Ways
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 962c0000
-    m_LastClickedID: 11414
-    m_ExpandedIDs: 00000000962c0000222d0000b02d0000c42d0000142e0000342e0000be2e0000502f0000602f0000822f0000c02f0000dc2f00001431000044310000d6310000f03100001e320000ffffff7f
+    m_SelectedIDs: b02d0000
+    m_LastClickedID: 11696
+    m_ExpandedIDs: 00000000242c0000ae2c0000862d0000b02e0000042f000044300000dc300000183300001a3300001c3300001e33000020330000223300002433000026330000283300002a3300002c3300002e330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: EasyMobile
-      m_OriginalName: EasyMobile
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 12900
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -627,7 +627,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 456}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000962c0000222d00003e2d0000b02d0000c42d0000142e0000be2e0000602f0000822f0000c02f0000c82f0000dc2f00001431000044310000d6310000f0310000f83100001e320000
+    m_ExpandedIDs: 00000000242c0000ae2c0000862d0000b02e0000042f000044300000dc300000183300001a3300001c3300001e33000020330000223300002433000026330000283300002a3300002c3300002e330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -654,22 +654,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: f6250000d807000088070000580e0100126f0100aa320000882c000054300000cc3300007433000000000000062e0000e25900002ca3fdffb8300000aef6feff60280000e82e0000ce300000e62c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Materials
-      m_OriginalName: Materials
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 11728
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
