@@ -72,7 +72,6 @@ GameObject:
   - component: {fileID: 224186075841206458}
   - component: {fileID: 222438808693834690}
   - component: {fileID: 114753436626649990}
-  - component: {fileID: 114392615178796896}
   m_Layer: 5
   m_Name: Hold
   m_TagString: Untagged
@@ -909,17 +908,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AccessKey: 3c7df8898ddbfec0a5b67adb7787024e8aff9992
   SecretKey: 5a71ba70e354c9417608f1ab8d248246f8524c59
---- !u!114 &114392615178796896
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1054409146810574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74a1a3f9b96ec9244a776a5077132bfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114402410378339644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1343,6 +1331,7 @@ MonoBehaviour:
   UIStatus: 00000000000000000000
   UIShareScreen: 00000000010101000000
   ImageHolder: {fileID: 1054409146810574}
+  albumName: MissWays
 --- !u!114 &114964735655425462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1824,6 +1813,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -161.69995, y: 340.80005}
-  m_SizeDelta: {x: 172.59998, y: 172.6001}
+  m_AnchoredPosition: {x: -93, y: 122}
+  m_SizeDelta: {x: 258.5, y: 258.5}
   m_Pivot: {x: 1, y: 0}

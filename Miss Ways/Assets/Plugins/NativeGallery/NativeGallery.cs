@@ -359,7 +359,7 @@ public static class NativeGallery
 #endif
 	}
 
-	private static string GetSavePath( string album, string filenameFormatted )
+	public static string GetSavePath( string album, string filenameFormatted )
 	{
 		string saveDir;
 #if !UNITY_EDITOR && UNITY_ANDROID

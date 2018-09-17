@@ -16,18 +16,19 @@ namespace EasyMobile.Demo
         [SerializeField]
         List<bool> UIShareScreen;
 
-        Texture2D texture;
         [SerializeField]
         GameObject ImageHolder;
 
-        // Screenshot names don't need to include the extension (e.g. ".png")
-        string ScreenshotName = "MissWays";
+        public string albumName = "Launchable";
 
-        Texture2D screenCap;
+        // Screenshot names don't need to include the extension (e.g. ".png")
+        private string screenshotPath;
+
+        Texture2D screenshot;
 
         private void Awake()
         {
-            screenCap = new Texture2D(Screen.width, Screen.height, TextureFormat.RGBA32, false);
+            screenshot = new Texture2D(Screen.width, Screen.height, TextureFormat.RGBA32, false);
         }
 
         public void ScreenshotScreen()
@@ -45,8 +46,6 @@ namespace EasyMobile.Demo
             VuforiaRenderer.Instance.Pause(true);
 
             StartCoroutine(PreviewScreenShot());
-
-
         }
 
         public void CameraView()
@@ -67,7 +66,7 @@ namespace EasyMobile.Demo
                 UIToHide[i].SetActive(false);
             }
 
-            StartCoroutine(CROneStepSharing());
+            StartCoroutine(CRShareScreenshot());
         }
 
         public void SaveScreenshot()
@@ -76,11 +75,6 @@ namespace EasyMobile.Demo
             {
                 UIToHide[i].SetActive(false);
             }
-            
-            PlayerPrefs.SetInt("screenshot", PlayerPrefs.GetInt("screenshot")+1);
-            
-            ScreenshotName = ScreenshotName + PlayerPrefs.GetInt("screenshot");
-            
             StartCoroutine(CRSaveScreenshot());
         }
 
@@ -88,46 +82,56 @@ namespace EasyMobile.Demo
         {
             yield return new WaitForEndOfFrame();
 
-            screenCap.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
-            screenCap.Apply();
+            screenshot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+            screenshot.Apply();
 
             ImageHolder.SetActive(true);
-            ImageHolder.GetComponent<RawImage>().texture = screenCap;
+            ImageHolder.GetComponent<RawImage>().texture = screenshot;
 
             for (int i = 0; i < UIToHide.Count; i++)
             {
                 UIToHide[i].SetActive(UIShareScreen[i]);
             }
+
+            StartCoroutine(CRSaveScreenshot());
         }
 
         IEnumerator CRSaveScreenshot()
         {
             yield return new WaitForEndOfFrame();
 
-            ScreenshotName = "MissWays" + PlayerPrefs.GetInt("screenshot").ToString();
-            Debug.Log(ScreenshotName);
-            Sharing.SaveScreenshot(ScreenshotName);
-
-            NativeUI.Alert("MissWays", "Picture Saved To Gallery");
-
-            for (int i = 0; i < UIToHide.Count; i++)
+            if (PlayerPrefs.GetInt("screenshot") == null || PlayerPrefs.GetInt("screenshot") == 0)
             {
-                UIToHide[i].SetActive(UIShareScreen[i]);
+                PlayerPrefs.SetInt("screenshot", 1);
             }
+            else
+            {
+                PlayerPrefs.SetInt("screenshot", PlayerPrefs.GetInt("screenshot") + 1);
+            }
+
+            screenshotPath = albumName + PlayerPrefs.GetInt("screenshot").ToString() + ".png";
+
+            Debug.Log(screenshotPath);
+
+            NativeGallery.SaveImageToGallery(screenshot, albumName, screenshotPath, null);
         }
         
-        IEnumerator CROneStepSharing()
+        IEnumerator CRShareScreenshot()
         {
-            yield return new WaitForEndOfFrame();
-            ScreenshotName = "MissWaysScreenshot" + PlayerPrefs.GetInt("screenshot").ToString();
-            Debug.Log(ScreenshotName);
-            Sharing.SaveScreenshot(ScreenshotName);
-            NativeGallery.LoadImageAtPath(Sharing.ShareScreenshot(ScreenshotName, ""), -1);
+            NativeShare shareObject = new NativeShare();
+
+            shareObject.SetSubject("A screenshot from the " + albumName + " app!");
+            shareObject.SetText("A screenshot from the " + albumName + " app!");
+            shareObject.AddFile(NativeGallery.GetSavePath(albumName, screenshotPath));
+            shareObject.SetTitle(albumName + " Sharing");
+            shareObject.Share();
 
             for (int i = 0; i < UIToHide.Count; i++)
             {
                 UIToHide[i].SetActive(UIShareScreen[i]);
             }
+
+            yield return new WaitForEndOfFrame();
         }
     }
 }

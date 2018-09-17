@@ -7,7 +7,9 @@ E-mail: yasirkula@gmail.com
 This plugin helps you natively share files (images, videos, documents, etc.) and/or plain text on Android & iOS. A ContentProvider is used to share the media on Android.
 
 2. HOW TO
-for Android: using a ContentProvider requires a small modification in AndroidManifest. If your project does not have an AndroidManifest.xml file located at Assets/Plugins/Android, you should copy Unity's default AndroidManifest.xml from C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer (it might be located in a subfolder, like 'Apk') to Assets/Plugins/Android. Inside the <application>...</application> tag of your AndroidManifest, insert the following code snippet:
+for Android: using a ContentProvider requires a small modification in AndroidManifest. If your project does not have an AndroidManifest.xml file located at Assets/Plugins/Android, 
+you should copy Unity's default AndroidManifest.xml from C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer (it might be located in a subfolder, like 'Apk') 
+to Assets/Plugins/Android. Inside the <application>...</application> tag of your AndroidManifest, insert the following code snippet:
 
 <provider
   android:name="com.yasirkula.unity.UnitySSContentProvider"
