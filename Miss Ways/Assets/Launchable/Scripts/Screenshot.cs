@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Vuforia;
 
-namespace EasyMobile.Demo
+namespace Launchable
 {
     public class Screenshot : MonoBehaviour
     {
