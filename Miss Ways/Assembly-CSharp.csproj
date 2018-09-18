@@ -74,6 +74,7 @@
     <Compile Include="Assets\Launchable\Scripts\Screenshot.cs" />
     <Compile Include="Assets\Launchable\Scripts\Tutorial.cs" />
     <Compile Include="Assets\MissWays\Scripts\OpenURL.cs" />
+    <Compile Include="Assets\MissWays\Scripts\ShowInfo.cs" />
     <Compile Include="Assets\MissWays\Scripts\ShowMenu.cs" />
     <Compile Include="Assets\UI\Pagination\Events\DragEventAnalysis.cs" />
     <Compile Include="Assets\UI\Pagination\Events\PassThroughDragEvents.cs" />
@@ -123,18 +124,35 @@
     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml" />
     <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
     <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\UI\Pagination\Documentation\Change List.txt" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml" />
     <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_VuMark.xml" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Vuforia\Shaders\DepthContour.shader" />
     <None Include="Assets\UI\Pagination\Documentation\Upgrading from v1.19 to v1.20.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\UI\Pagination\Examples\Sprites\Fantasy UI\Portraits\Flare Portrait Pack (Number Four).txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Anthony/Documents/missways/Miss Ways/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
