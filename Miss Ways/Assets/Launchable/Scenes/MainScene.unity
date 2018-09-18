@@ -319,6 +319,36 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -154
       objectReference: {fileID: 0}
+    - target: {fileID: 114375615694076796, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 467482386}
+    - target: {fileID: 114375615694076796, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickEmail
+      objectReference: {fileID: 0}
+    - target: {fileID: 114191548182932590, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 467482386}
+    - target: {fileID: 114191548182932590, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickPhone
+      objectReference: {fileID: 0}
+    - target: {fileID: 114924501145244832, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 467482386}
+    - target: {fileID: 114924501145244832, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickWebsite
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a88263134bee3140827d4e1a8a6ebda, type: 2}
   m_IsPrefabAsset: 0
@@ -327,6 +357,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224583402045005744, guid: 7a88263134bee3140827d4e1a8a6ebda,
     type: 2}
   m_PrefabInternal: {fileID: 467482384}
+--- !u!114 &467482386 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114895856523158492, guid: 7a88263134bee3140827d4e1a8a6ebda,
+    type: 2}
+  m_PrefabInternal: {fileID: 467482384}
+  m_Script: {fileID: 11500000, guid: 036faa3c151828a42b8f196d079e1fd7, type: 3}
 --- !u!1 &649748011
 GameObject:
   m_ObjectHideFlags: 0
