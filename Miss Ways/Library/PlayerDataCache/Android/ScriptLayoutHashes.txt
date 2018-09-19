@@ -2,7 +2,7 @@ Android
 PlayerPath?
 C:/Users/Anthony/Documents/missways/Miss Ways/missways.apk
 SceneListBegin?
-Assets/Launchable/Scenes/SplashScreen.unity
+Assets/Launchable/Scenes/SkipTutorial.unity
 Assets/Launchable/Scenes/Tutorial.unity
 Assets/Launchable/Scenes/MainScene.unity
 SceneListEnd?
@@ -58,7 +58,7 @@ a44114bd4fa541174f78b4bb92bacb48 UnityEngine.UI.dll:UnityEngine.EventSystems.Sta
 e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-b41a89a73ae47219210f8252d60486d7 Assembly-CSharp.dll:Launchable.ImageTargetManager
+d86045afc47485259d18d56d716c5904 Assembly-CSharp.dll:Launchable.ImageTargetManager
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:Launchable.LaunchableTrackableEventHandler
 50b0b141074b216c8b53b1bd467f73c9 Unity.TextMeshPro.dll:TMPro.TMP_InputField
 53cefe5d98cadefbab750835e70b89c0 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -135,6 +135,7 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 01a3b4c6550e521914952fe60c29de5f Assembly-CSharp.dll:UI.Pagination.PagedRect
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
+b65276f9c1772cdbcfe9c78a0ddc6b15 Assembly-CSharp.dll:.ShowInfo
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f35860350df72508419d9f9fcd288594 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorStageBehaviour
@@ -325,4 +326,4 @@ aa5e3523afd7fd907d3f99da4b777fdc Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 c8a41ce4eea7677f6dd2aa0e422a2f04 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-b65276f9c1772cdbcfe9c78a0ddc6b15 Assembly-CSharp.dll:.ShowInfo
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.SkipTutorial

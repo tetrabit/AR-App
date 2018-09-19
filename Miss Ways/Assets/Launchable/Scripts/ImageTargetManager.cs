@@ -4,6 +4,7 @@ using UnityEngine;
 using Vuforia;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using System;
 
 namespace Launchable
 {
@@ -25,6 +26,15 @@ namespace Launchable
         [HideInInspector]
         public GameObject trackedTarget;
 
+        [Serializable]
+        public struct ModelDictionary
+        {
+            public string name;
+            public GameObject model;
+        }
+
+        public ModelDictionary[] models;
+
         public void GenerateVideoPlayer(string url)
         {
             trackedTarget = Instantiate(videoImageTargetTemplate);
@@ -34,7 +44,14 @@ namespace Launchable
 
         public void GenerateModel(string modelName)
         {
-
+            for(int i = 0; i < models.Length; i++)
+            {
+                if(modelName == models[i].name)
+                {
+                    trackedTarget = Instantiate(models[i].model);
+                    LaunchableManager.instance.CloudManager().SetImageTargetFocus(trackedTarget);
+                }
+            }
         }
 
         /*

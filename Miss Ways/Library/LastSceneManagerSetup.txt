@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Launchable/Scenes/MainScene.unity
+- path: Assets/Launchable/Scenes/SkipTutorial.unity
   isLoaded: 1
   isActive: 1

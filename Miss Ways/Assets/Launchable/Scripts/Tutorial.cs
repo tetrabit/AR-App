@@ -18,7 +18,7 @@ public class Tutorial : MonoBehaviour
     }
     public void TutorialHasBeenRan()
     {
-        PlayerPrefs.SetInt(tutorial, 1);
+        PlayerPrefs.SetInt(tutorial, 3);
         SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
     }
 }

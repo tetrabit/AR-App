@@ -152,6 +152,60 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114491347040541470, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114491347040541470, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114666567910280664, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114666567910280664, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114904891978924742, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114904891978924742, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114393107518293840, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114393107518293840, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114716513354294058, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114716513354294058, guid: 7a88263134bee3140827d4e1a8a6ebda,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182211053592910, guid: 7a88263134bee3140827d4e1a8a6ebda, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a88263134bee3140827d4e1a8a6ebda, type: 2}
   m_IsPrefabAsset: 0

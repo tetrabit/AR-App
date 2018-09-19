@@ -64,11 +64,6 @@ namespace Launchable
             LaunchableManager.instance.ImageTargetManager().GenerateVideoPlayer(url);
         }
 
-        void LoadVideo(string url, GameObject imageTarget)
-        {
-            LaunchableManager.instance.ImageTargetManager().GenerateVideoPlayer(url);
-        }
-
         void Load3dAsset(string url)
         {
             LaunchableManager.instance.ImageTargetManager().GenerateModel(url);
