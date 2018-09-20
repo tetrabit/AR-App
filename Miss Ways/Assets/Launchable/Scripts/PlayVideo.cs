@@ -29,9 +29,17 @@ public class PlayVideo : MonoBehaviour
     {
         if(videoPlayer && videoPlayer.isPrepared && videoPlayer.url != null)
         {
-            videoPlayer.Pause();
-            playButton.SetActive(true);
+            StartCoroutine(PauseVideo());
         }
+    }
+
+    public IEnumerator PauseVideo()
+    {
+        //yield return new WaitForSeconds(1);
+
+        yield return new WaitForEndOfFrame();
+        videoPlayer.Pause();
+        playButton.SetActive(true);
     }
 
     public IEnumerator NewVideo(string urls)

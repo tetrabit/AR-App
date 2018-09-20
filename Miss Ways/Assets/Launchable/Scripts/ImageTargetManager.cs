@@ -54,6 +54,14 @@ namespace Launchable
             }
         }
 
+        public void PauseVideo()
+        {
+            if(trackedTarget != null && trackedTarget.GetComponent<PlayVideo>() != null)
+            {
+                trackedTarget.GetComponent<PlayVideo>().PauseVid();
+            }
+        }
+
         /*
          *  
             trackedTarget = Instantiate(baseImageTargetTemplate);
