@@ -121,6 +121,11 @@ namespace Launchable
                 LaunchableManager.instance.CallToActionManager().ShowLinks();
                 LaunchableManager.instance.AutoFocus().DisbaleAutoFocus();
             }
+
+            if (LaunchableManager.instance.ImageTargetManager().trackedTarget.GetComponentInChildren<HouseCardAnimationController>() != null)
+            {
+                LaunchableManager.instance.AreaPerimeter().Init();
+            }
         }
 
         private void LaunchableOnTrackingLost()
@@ -128,6 +133,11 @@ namespace Launchable
             if (LaunchableManager.instance.ImageTargetManager().trackedTarget.GetComponent<PlayVideo>() != null)
             {
                 LaunchableManager.instance.ImageTargetManager().trackedTarget.GetComponent<PlayVideo>().PauseVid();
+            }
+
+            if(LaunchableManager.instance.ImageTargetManager().trackedTarget.GetComponentInChildren<HouseCardAnimationController>() != null)
+            {
+                LaunchableManager.instance.AreaPerimeter().Hide();
             }
 
             if (LaunchableManager.instance != null)

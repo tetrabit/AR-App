@@ -72,8 +72,10 @@
     <Compile Include="Assets\Launchable\Scripts\PlayFullscreenVideo.cs" />
     <Compile Include="Assets\Launchable\Scripts\PlayVideo.cs" />
     <Compile Include="Assets\Launchable\Scripts\Screenshot.cs" />
+    <Compile Include="Assets\Launchable\Scripts\ShareIcon.cs" />
     <Compile Include="Assets\Launchable\Scripts\SkipTutorial.cs" />
     <Compile Include="Assets\Launchable\Scripts\Tutorial.cs" />
+    <Compile Include="Assets\MissWays\Scripts\AreaPerimeter.cs" />
     <Compile Include="Assets\MissWays\Scripts\HouseCardAnimationController.cs" />
     <Compile Include="Assets\MissWays\Scripts\OpenURL.cs" />
     <Compile Include="Assets\MissWays\Scripts\ShowInfo.cs" />

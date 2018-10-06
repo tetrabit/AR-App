@@ -20,6 +20,7 @@ namespace Launchable
         private ImageTargetManager itm;
         private CallToActionManager cta;
         private AutoFocus af;
+        private AreaPerimeter ap;
 
         void Start()
         {
@@ -30,6 +31,7 @@ namespace Launchable
             itm = GetComponent<ImageTargetManager>();
             cta = GetComponent<CallToActionManager>();
             af = GetComponent<AutoFocus>();
+            ap = GetComponent<AreaPerimeter>();
         }
 
         private void CreateSingleton()
@@ -51,6 +53,7 @@ namespace Launchable
         public ImageTargetManager ImageTargetManager() { return itm; }
         public CallToActionManager CallToActionManager() { return cta; }
         public AutoFocus AutoFocus() { return af; }
+        public AreaPerimeter AreaPerimeter() { return ap; }
 
     }
 }

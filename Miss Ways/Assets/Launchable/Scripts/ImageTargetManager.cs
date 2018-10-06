@@ -50,6 +50,11 @@ namespace Launchable
                 {
                     trackedTarget = Instantiate(models[i].model);
                     LaunchableManager.instance.CloudManager().SetImageTargetFocus(trackedTarget);
+                    if(modelName == "HouseCard")
+                    {
+                        LaunchableManager.instance.AreaPerimeter().SetAnimationController(trackedTarget.GetComponentInChildren<HouseCardAnimationController>());
+                        LaunchableManager.instance.AreaPerimeter().Init();
+                    }
                 }
             }
         }
@@ -62,7 +67,7 @@ namespace Launchable
             }
         }
 
-        /*
+        /*  ///////attempted code for generating a video player prefab at runtime//////////////
          *  
             trackedTarget = Instantiate(baseImageTargetTemplate);
             trackedTarget.transform.name = "Tracked Target Video";
