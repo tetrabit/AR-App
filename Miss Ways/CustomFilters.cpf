@@ -1,0 +1,137 @@
+[
+    {
+        "filterName": "test",
+        "mainColor": {
+            "r": 0.0,
+            "g": 0.0,
+            "b": 1.0,
+            "a": 1.0
+        },
+        "isStandardFilter": false,
+        "isTempFilter": false,
+        "useAdvancedColors": false,
+        "customTextColor": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+        },
+        "customBackgroundColor": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+        },
+        "swallowStandard": true,
+        "standardCanSwallow": false,
+        "overrideStandardColors": true,
+        "overrideStandardIcon": true,
+        "collapseIconBackground": false,
+        "collapseIconSymbol": false,
+        "collapseIconLetter": false,
+        "collapseIconTexture": false,
+        "useIconBackground": true,
+        "useIconSymbol": false,
+        "useIconLetter": true,
+        "useIconTexture": false,
+        "filterFormatVersion": -1,
+        "iconColorize": false,
+        "useAndOpForSearchList": false,
+        "searchList": [
+            {
+                "searchString": "test",
+                "searchType": "Exact",
+                "removeSearchStringFromLog": false,
+                "logTypeList": [
+                    {
+                        "logType": "Log",
+                        "name": null,
+                        "isEnabled": true,
+                        "collapsed": false,
+                        "itemGUID": "48c88d7e-9ad0-4452-a3a6-90e3aeaefe1c"
+                    }
+                ],
+                "columnTypeList": [
+                    {
+                        "columnType": "Log",
+                        "name": null,
+                        "isEnabled": true,
+                        "collapsed": false,
+                        "itemGUID": "6b78f0d5-3a3e-4230-98f4-35f9c8ae4d02"
+                    }
+                ],
+                "name": null,
+                "isEnabled": true,
+                "collapsed": false,
+                "itemGUID": "4f3e89e9-4619-42fb-86a8-0210bad6f675"
+            }
+        ],
+        "iconLetter": {
+            "iconType": "Text",
+            "iconType2": "None",
+            "iconText": "A",
+            "useIconTextFirstLetter": true,
+            "useIconLogColor": false,
+            "iconColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "iconBuiltInID": "BACKGROUNDS_ECPBGROUNDEDSQUARE",
+            "iconTextureGUID": "",
+            "useIconShadow": true,
+            "iconOffset": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "iconShadowOffset": {
+                "x": 0.5,
+                "y": 0.5
+            },
+            "iconSize": 13.0,
+            "name": null,
+            "isEnabled": true,
+            "collapsed": false,
+            "itemGUID": null
+        },
+        "iconSymbol": null,
+        "iconBackground": {
+            "iconType": "Background",
+            "iconType2": "None",
+            "iconText": "A",
+            "useIconTextFirstLetter": true,
+            "useIconLogColor": true,
+            "iconColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "iconBuiltInID": "BACKGROUNDS_ECPBGROUNDEDSQUARE",
+            "iconTextureGUID": "",
+            "useIconShadow": true,
+            "iconOffset": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "iconShadowOffset": {
+                "x": 0.5,
+                "y": 0.5
+            },
+            "iconSize": 13.0,
+            "name": null,
+            "isEnabled": true,
+            "collapsed": false,
+            "itemGUID": null
+        },
+        "iconTexture": null,
+        "showInToolbar": true,
+        "hideLabelInToolbar": false,
+        "hideWhenNoMatches": false,
+        "name": "test",
+        "isEnabled": true,
+        "collapsed": false,
+        "itemGUID": "f77e1a2f-141a-4e1d-a64d-16b0fd87fc66"
+    }
+]
